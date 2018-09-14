@@ -41,11 +41,11 @@ class App extends Component {
    <div className="container">
       <nav className="navbar">add and delete</nav>
       <div className="button-container">       
-        {this.state.arrCounts.map(arrCount =>
+        {this.props.arrCounts.map(arrCount =>
           <Count key={arrCount.id }
         id={arrCount.id}
         value={arrCount.value}
-        onDelete={this.handleDelete}
+        onDelete={this.props.handleDelete}
         onAdd={this.handleAdd}/>)
         }
       </div>
@@ -63,13 +63,19 @@ const count = compose(
       test: props.test + "1"
     }
   }),
-  withStateHandlers(() => {
-      //with props
-  () => {
-    return {
-      //value: defaultvalue
-    },
-      //withHandlers
+  withStateHandlers(
+    //with props
+    () => {
+      return {
+        arrCounts:  [
+          {id: 1, value: 0, name: "tzeyang"},
+          {id: 2, value: 0, },
+          {id: 3, value: 0}
+        ]
+      }
+    }
+    ,
+    //withHandlers
     {
       setArrCounts: props =>(arrCount) => {
         return {
@@ -77,9 +83,14 @@ const count = compose(
         }
       }
     }
-  }
-  }),
+  ),
   withHandlers({
+    handleDelete: ({ arrCounts, setArrCounts }) => (selected) => {
+      arrCounts = arrCounts.filter(arrCount => arrCount.id !== selected )
+      console.log(selected, arrCounts);
+      setArrCounts({arrCounts})
+      console.log("click")
+    },
     handlerCreater: props =>(arg1,arg2) => {
       console.log(props.test, arg1)
     }
