@@ -1,28 +1,75 @@
-.App {
-  text-align: center;
+body {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.container {
+    width: 466px;
+    height: 549px;
+    background-color: #f3f3f3;
+    margin: 0 auto;
+    width: 466px;
+    position: relative;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.navbar {
+    width: 466px;
+    height: 99px;
+    background-color: #65CCC9;
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.App-title {
-  font-size: 1.5em;
+.button-container {
+    padding-top: 164px;
+    padding-left: 36.5px;
+    padding-right: 36.5px;
 }
-
-.App-intro {
-  font-size: large;
+.group {
+    padding: 40px 10px 40px 10px;
+    text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.group:not(:last-child) {
+  border-bottom: 1px solid rgba(101, 204, 201, .25);
 }
+.value {
+    width: 66px;
+    height: 49px;
+    background-color: #FFCE5D;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    padding: 14px 19px 14px 19px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.btn {
+  cursor: pointer;
+}
+.btn__add {
+    width: 66px;
+    height: 49px;
+    background-color: #65CCC9;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    padding: 14px 19px 14px 19px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.btn__delete {
+    width: 147px;
+    height: 49px;
+    background-color: #F73535;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 8px;
+    padding: 14px 46px 14px 46px;
+    font-size: 12px;
+}
+                 
