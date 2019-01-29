@@ -4,17 +4,6 @@ class Count extends Component {
     state = {
             count: 0
         };
-    //   handleClick = () => { 
-    //        this.setState({count: this.state.count + 1})
-    //   }
-
-      componentDidUpdate(prevProps, prevState) {
-          console.log("didupdate", prevProps, this.state)
-      }
-      shouldComponentUpdate(nextProps, nextState) {
-          console.log("shouldupdate", nextProps, this.state)
-          return true
-      }
     render() {
         return (
             <div className="group">
@@ -25,6 +14,7 @@ class Count extends Component {
         );
     }
 }
+
 export default Count;
 
 

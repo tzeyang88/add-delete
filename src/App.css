@@ -2,6 +2,7 @@ body {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
 .container {
     width: 466px;
     height: 549px;
@@ -10,6 +11,7 @@ body {
     width: 466px;
     position: relative;
 }
+
 .navbar {
     width: 466px;
     height: 99px;
@@ -25,18 +27,22 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .button-container {
     padding-top: 164px;
     padding-left: 36.5px;
     padding-right: 36.5px;
 }
+
 .group {
     padding: 40px 10px 40px 10px;
     text-align: center;
 }
+
 .group:not(:last-child) {
   border-bottom: 1px solid rgba(101, 204, 201, .25);
 }
+
 .value {
     width: 66px;
     height: 49px;
@@ -48,9 +54,11 @@ body {
     margin-right: 20px;
     font-size: 12px;
 }
+
 .btn {
   cursor: pointer;
 }
+
 .btn__add {
     width: 66px;
     height: 49px;
@@ -62,6 +70,7 @@ body {
     margin-right: 20px;
     font-size: 12px;
 }
+
 .btn__delete {
     width: 147px;
     height: 49px;
