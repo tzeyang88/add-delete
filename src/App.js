@@ -82,7 +82,7 @@ const count = compose(
   withHandlers({
     handlerCreater: props =>(arg1,arg2) => {
       console.log(props.test, arg1)
-    }
+    } 
   })
 )
 export default count(App);
